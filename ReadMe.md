@@ -36,15 +36,16 @@ If you want to customize the look of your chatbot, you can add a script to the `
 ```html
 <script>
         // Function to change the CSS variables
-        function setChatbotHeaderColors(backgroundColor, textColor) {
+        function setChatbotHeaderColors(backgroundColor, textColor, fontFamily,iconUrl) {
             document.documentElement.style.setProperty('--header-background-color', backgroundColor);
             document.documentElement.style.setProperty('--header-text-color', textColor);
+            document.documentElement.style.setProperty('--font-family', fontFamily);
+            document.documentElement.setAttribute('data-icon-url', iconUrl); // Store icon URL in data attribute
+
         }
 
         // Call the function when the DOM is fully loaded
-        document.addEventListener('DOMContentLoaded', function () {
-            setChatbotHeaderColors('#DA291C', '#FFFFFF'); // Change with preferred background Color and textColor
-        });
-</script>
+        setChatbotHeaderColors('#DA291C', '#FFFFFF','poppins',' https://cdn.jsdelivr.net/gh/vijaykarsh2610/Standalone/AristHeaderIcon.svg'); // Change to blue background with white text        
+    </script>
 ```
 Here `setChatbotHeaderColors('#DA291C', '#FFFFFF');` added default color of arist application. replace `#DA291C` with preferred background-color and `#FFFFFF` with preferred text-color.
