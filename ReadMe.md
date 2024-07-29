@@ -15,7 +15,7 @@
 Here is the script that needs to be included inside the `<head>` section of your HTML file to ensure it runs when the HTML page loads.
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/vijaykarsh2610/Standalone/AristChatbotlatest.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/vijaykarsh2610/Standalone/AristChatbot.js"></script>
 ```
 ### Step2. Adding Subscription key inside the head section.
 
@@ -26,7 +26,7 @@ To manage and store your subscription key efficiently, you'll need to add a scri
 ```
 **Note :** Replace-subscription-key with acutal subscription key received by arist team.
 
-**Note: Our case please replace with ```Techment@123```.**
+**Note: Our case please replace with ```gR2mmM+ls0OifHf4QPqSjiByLoohFKimVCuaLB97aWEOeO7wdCn25bicsFYuZ35qD/ygbZmAgHvo8zxCS9s/L9V8MgrM/8VCSSRRcXXZEdpuysfNE6bQWdbnCZFi3+xBtI09koZMr4IOBPqO3/Xgpd1rT0nMc1KUQIsDXu6T67o=```.**
 
 
 ### Step3.(Optional) Custom Chatbot theme.
@@ -36,15 +36,17 @@ If you want to customize the look of your chatbot, you can add a script to the `
 ```html
 <script>
         // Function to change the CSS variables
-        function setChatbotHeaderColors(chatbotName,backgroundColor,textColor, fontFamily,iconUrl) {
+        function setChatbotHeaderColors(chatbotName,backgroundColor,textColor, fontFamily,chatbotIconUrl,iconUrl) {
             document.documentElement.setAttribute('data-header-text', chatbotName); // Store icon URL in data attribute
             document.documentElement.style.setProperty('--header-background-color', backgroundColor);
             document.documentElement.style.setProperty('--header-text-color', textColor);
             document.documentElement.style.setProperty('--font-family', fontFamily);
+            document.documentElement.setAttribute('data-chaticon-url', chatbotIconUrl); // Store icon URL in data attribute
             document.documentElement.setAttribute('data-icon-url', iconUrl); // Store icon URL in data attribute
+
         }
         // Call the function when the DOM is fully loaded
-        setChatbotHeaderColors('Arist Assistant','#DA291C','#FFFFFF','poppins',' https://cdn.jsdelivr.net/gh/vijaykarsh2610/Standalone/AristHeaderIcon.svg'); // Change to blue background with white text        
+        setChatbotHeaderColors('Arist Assistant','#DA291C','#FFFFFF','poppins','https://cdn.jsdelivr.net/gh/vijaykarsh2610/Standalone/chatbotIcon.svg','https://cdn.jsdelivr.net/gh/vijaykarsh2610/Standalone/AristHeaderIcon.svg'); // Change to blue background with white text        
     </script>
 ```
 Here `setChatbotHeaderColors('#DA291C', '#FFFFFF');` added default color of arist application. replace `#DA291C` with preferred background-color and `#FFFFFF` with preferred text-color.
