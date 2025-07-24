@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Apryse WebViewer in SharePoint</title>
+    <meta charset="utf-8" />
+    <script src="https://techment0.sharepoint.com/sites/Apryse/SiteAssets/webviewer.min.js"></script> 
+    <style>
+      html, body, #viewer {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="viewer"></div>
+    <script>
+      WebViewer({
+        path: 'https://techment0.sharepoint.com/sites/Apryse/SiteAssets/lib/', 
+        initialDoc: 'sample-local-pdf.pdf' 
+      }, document.getElementById('viewer'))
+      .then(instance => {
+        // WebViewer is ready
+        console.log('WebViewer loaded');
+      });
+    </script>
+  </body>
+</html>
